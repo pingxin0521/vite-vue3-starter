@@ -5,9 +5,9 @@
       <el-card class="box-card">
         <template #header>
           <div class="card-header">
-            <span>XPoet</span>
+            <span>PingXin</span>
             <el-button class="button" type="text" @click="getUserInfo"
-              >点击获取XPoet信息
+              >点击获取PingXin信息
             </el-button>
           </div>
         </template>
@@ -23,6 +23,7 @@
 <script lang="ts">
 import { defineComponent, ref, Ref } from 'vue'
 import axios from '../utils/axios'
+
 export default defineComponent({
   name: 'Axios',
   setup() {
@@ -31,7 +32,7 @@ export default defineComponent({
     const getUserInfo = () => {
       loading.value = true
       axios
-        .get('/users/XPoet')
+        .get('/users/pingxin0521')
         .then((response) => {
           console.log('response: ', response.data)
           userInfo.value = response.data
