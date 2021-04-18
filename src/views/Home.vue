@@ -6,17 +6,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue';
 
-export default defineComponent({
-  name: 'Home'
-})
+  export default defineComponent({
+    name: 'Home',
+  });
 </script>
 
 <style scoped lang="stylus">
-.home-container {
-  .vue-element-plus-logo {
-    width 50%
+  .home-container {
+    .vue-element-plus-logo {
+      width 50%
+    }
   }
-}
 </style>

@@ -8,26 +8,26 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, toRefs } from 'vue'
-import { useStore } from 'vuex'
+  import { computed, defineComponent, reactive, toRefs } from 'vue';
+  import { useStore } from 'vuex';
 
-export default defineComponent({
-  name: 'Vuex',
-  setup() {
-    const store = useStore()
-    const reactiveData = reactive({
-      count: computed(() => store.state.count),
-      double: computed(() => store.getters.double)
-    })
-    const add = () => {
-      store.commit('increment')
-    }
-    return {
-      ...toRefs(reactiveData),
-      add
-    }
-  }
-})
+  export default defineComponent({
+    name: 'Vuex',
+    setup() {
+      const store = useStore();
+      const reactiveData = reactive({
+        count: computed(() => store.state.count),
+        double: computed(() => store.getters.double),
+      });
+      const add = () => {
+        store.commit('increment');
+      };
+      return {
+        ...toRefs(reactiveData),
+        add,
+      };
+    },
+  });
 </script>
 
 <style scoped lang="less"></style>
